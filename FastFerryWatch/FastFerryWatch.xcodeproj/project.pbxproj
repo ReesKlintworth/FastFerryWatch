@@ -20,6 +20,9 @@
 		0AA10BFA2388D5470066BBF1 /* timetable.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AA10BF92388D5470066BBF1 /* timetable.json */; };
 		0AA10BFC2388DA100066BBF1 /* TimetableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA10BFB2388DA100066BBF1 /* TimetableList.swift */; };
 		0AA10BFE2388E0FA0066BBF1 /* CircularQuayHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA10BFD2388E0FA0066BBF1 /* CircularQuayHostingController.swift */; };
+		0AA10C002388E2F20066BBF1 /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA10BFF2388E2F20066BBF1 /* Timetable.swift */; };
+		0AA10C022388E3130066BBF1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA10C012388E3130066BBF1 /* Day.swift */; };
+		0AA10C042388ECA70066BBF1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA10C032388ECA70066BBF1 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		0AA10BF92388D5470066BBF1 /* timetable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timetable.json; sourceTree = "<group>"; };
 		0AA10BFB2388DA100066BBF1 /* TimetableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableList.swift; sourceTree = "<group>"; };
 		0AA10BFD2388E0FA0066BBF1 /* CircularQuayHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularQuayHostingController.swift; sourceTree = "<group>"; };
+		0AA10BFF2388E2F20066BBF1 /* Timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
+		0AA10C012388E3130066BBF1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		0AA10C032388ECA70066BBF1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,9 @@
 		0AA10BF82388D5090066BBF1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0AA10BFF2388E2F20066BBF1 /* Timetable.swift */,
+				0AA10C012388E3130066BBF1 /* Day.swift */,
+				0AA10C032388ECA70066BBF1 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,8 +314,11 @@
 				0A0E1DCF2383EF3F00872AF3 /* ManlyHostingController.swift in Sources */,
 				0A0E1DD32383EF3F00872AF3 /* ComplicationController.swift in Sources */,
 				0AA10BFE2388E0FA0066BBF1 /* CircularQuayHostingController.swift in Sources */,
+				0AA10C042388ECA70066BBF1 /* Location.swift in Sources */,
+				0AA10C022388E3130066BBF1 /* Day.swift in Sources */,
 				0A0E1DCD2383EF3F00872AF3 /* ContentView.swift in Sources */,
 				0A0E1DD12383EF3F00872AF3 /* ExtensionDelegate.swift in Sources */,
+				0AA10C002388E2F20066BBF1 /* Timetable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

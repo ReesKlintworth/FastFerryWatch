@@ -10,12 +10,27 @@ import SwiftUI
 
 struct TimetableList: View {
     var title: String
+    
+    var timetable: Timetable {
+        let url = Bundle.main.url(forResource: "timetable.json", withExtension: nil) ?? URL(fileURLWithPath: "")
+        let data = try! Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        return try! decoder.decode(Timetable.self, from: data)
+    }
+
+    var schedule: Day {
+        let dayOfWeek = Calendar.current.dateComponents([.weekday], from: Date()).weekday ?? 1
+        let location = title == "Manly" ? timetable.manly : timetable.circular_quay
+        if dayOfWeek > 1 && dayOfWeek < 7 {
+            return location.weekday
+        }
+        return location.weekend
+    }
 
     var body: some View {
-        
         List {
             Section(header: Text(title)) {
-                ForEach(["6:00", "6:10", "7:00"], id: \.hashValue) { time in
+                ForEach(schedule.times, id: \.hashValue) { time in
                     Text(time)
                 }
             }
