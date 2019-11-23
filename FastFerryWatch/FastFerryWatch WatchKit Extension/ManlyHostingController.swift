@@ -1,5 +1,5 @@
 //
-//  HostingController.swift
+//  ManlyHostingController.swift
 //  FastFerryWatch WatchKit Extension
 //
 //  Created by Rees Klintworth on 11/19/19.
@@ -10,8 +10,8 @@ import WatchKit
 import Foundation
 import SwiftUI
 
-class HostingController: WKHostingController<ContentView> {
+class ManlyHostingController: WKHostingController<ContentView> {
     override var body: ContentView {
-        return ContentView()
+        return ContentView(title: "Manly")
     }
 }
