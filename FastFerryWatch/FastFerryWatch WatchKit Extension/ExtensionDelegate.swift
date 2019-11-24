@@ -6,12 +6,20 @@
 //  Copyright © 2019 Rees Klintworth. All rights reserved.
 //
 
+import CoreLocation
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
+    let locationManager: CLLocationManager = CLLocationManager()
+    var currentLocation: CLLocation = CLLocation()
+
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestLocation()
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
 
     func applicationDidBecomeActive() {
@@ -52,5 +60,15 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
+}
 
+extension ExtensionDelegate: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            self.currentLocation = location
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    }
 }
