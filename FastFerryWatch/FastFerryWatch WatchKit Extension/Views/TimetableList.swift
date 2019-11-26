@@ -17,7 +17,7 @@ struct TimetableList: View {
         let circularQuayDistance = circularQuayLocation.distance(from: currentLocation)
         if title == "Manly", manlyDistance < circularQuayDistance {
             return title + " (Closest)"
-        } else if circularQuayDistance < manlyDistance {
+        } else if title == "Circular Quay", circularQuayDistance < manlyDistance {
             return title + " (Closest)"
         }
         return title
@@ -30,8 +30,8 @@ struct TimetableList: View {
         return CLLocation()
     }
     
-    var manlyLocation: CLLocation = CLLocation(latitude: CLLocationDegrees(exactly: 33.8005)!, longitude: CLLocationDegrees(exactly: 151.2838)!)
-    var circularQuayLocation: CLLocation = CLLocation(latitude: CLLocationDegrees(exactly: 33.8607)!, longitude: CLLocationDegrees(exactly: 151.2110)!)
+    var manlyLocation: CLLocation = CLLocation(latitude: CLLocationDegrees(exactly: -33.8005)!, longitude: CLLocationDegrees(exactly: 151.2838)!)
+    var circularQuayLocation: CLLocation = CLLocation(latitude: CLLocationDegrees(exactly: -33.8607)!, longitude: CLLocationDegrees(exactly: 151.2110)!)
     
     var timetable: Timetable {
         let url = Bundle.main.url(forResource: "timetable.json", withExtension: nil) ?? URL(fileURLWithPath: "")
